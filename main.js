@@ -7,12 +7,20 @@ function receiveBillValue(){
   bill = document.querySelector("#bill").valueAsNumber
 }
 function receiveNumberOfPeopleValue(){
-    numberOfPeople = document.querySelector("#people")
+    numberOfPeople = document.querySelector("#people").valueAsNumber
 }
 function receiveTipPorcentageValue(value){
  tipPercentage = value / 100
+ removeClassButtonSelected()
+ 
+ 
+    buttonSelected = document.querySelector('#button-${value}')
+    buttonSelected.classList.add("button-selected")
 
- buttonSelected = document.querySelector('#button-${value}')
- buttonSelected.classList.add("button-selected")
-")
+}
+
+function removeClassButtonSelected() {
+if (buttonSelected !== null){
+    buttonSelected.classList.remove("button-selected")
+}   buttonSelected = null
 }
